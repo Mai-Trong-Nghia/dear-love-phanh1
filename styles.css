@@ -86,13 +86,12 @@ body {
   top: -50px;
   white-space: nowrap;
   font-size: 20px;
-  color: #ff00cc;
-  text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc;
   animation: fallText linear forwards;
   pointer-events: none;
   z-index: 10;
   transform: rotateX(30deg) rotateY(15deg);
-  opacity: 0.8;
+  opacity: 0.85;
+  will-change: transform, opacity;
 }
 
 @keyframes fallText {
@@ -104,4 +103,46 @@ body {
     transform: translateY(110vh) rotateX(30deg) rotateY(15deg);
     opacity: 0;
   }
+}
+
+.neon-red {
+  color: #ff3366;
+  text-shadow: 0 0 5px #ff3366, 0 0 10px #ff3366, 0 0 20px #ff3366;
+}
+
+.neon-green {
+  color: #00ff99;
+  text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 20px #00ff99;
+}
+
+.neon-blue {
+  color: #33ccff;
+  text-shadow: 0 0 5px #33ccff, 0 0 10px #33ccff, 0 0 20px #33ccff;
+}
+
+.neon-purple {
+  color: #cc66ff;
+  text-shadow: 0 0 5px #cc66ff, 0 0 10px #cc66ff, 0 0 20px #cc66ff;
+}
+
+.neon-yellow {
+  color: #ffff66;
+  text-shadow: 0 0 5px #ffff66, 0 0 10px #ffff66, 0 0 20px #ffff66;
+}
+
+.animal {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+  z-index: 5;
+  animation: moveAround linear infinite;
+}
+
+@keyframes moveAround {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(50vw, 10vh); }
+  50% { transform: translate(30vw, 50vh); }
+  75% { transform: translate(80vw, 70vh); }
+  100% { transform: translate(0, 0); }
 }
